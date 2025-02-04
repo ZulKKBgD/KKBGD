@@ -14,6 +14,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
         }
         .container {
             text-align: center;
@@ -21,6 +22,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
         }
         h1 {
             color: #333;
@@ -36,6 +38,14 @@
             border: none;
             border-radius: 10px;
         }
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+        .dark-mode .container {
+            background-color: #444;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -43,6 +53,12 @@
         <h1>Welcome to KKBgD Customer Service Chatbot!</h1>
         <p>Chat with the bot below:</p>
         <iframe src="https://app.vectorshift.ai/chatbots/deployed/679c757af7a15849e23623a6"></iframe>
+        <button onclick="toggleDarkMode()">Toggle Light/Dark Mode</button>
     </div>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
